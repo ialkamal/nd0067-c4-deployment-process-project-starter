@@ -1,0 +1,27 @@
+# Copy this file to terraform.tfvars and fill in your values
+# DO NOT commit terraform.tfvars to git - it's in .gitignore
+
+aws_region      = "us-east-1"
+project_name    = "udagram"
+environment     = "dev"
+
+# S3 Bucket - must be globally unique
+s3_bucket_name = "udagram-frontend-12345"
+
+# RDS Configuration
+db_identifier       = "udagram-db"
+db_name             = "postgres"
+db_username         = "postgres"
+db_password         = "YourSecurePassword123!"  # Change this!
+db_instance_class   = "db.t3.micro"
+db_allocated_storage = 20
+db_engine_version   = "15"
+
+# Elastic Beanstalk Configuration
+eb_application_name = "udagram-api"
+eb_environment_name = "udagram-api-dev"
+eb_solution_stack   = "64bit Amazon Linux 2023 v6.6.8 running Node.js 20"
+eb_instance_type    = "t2.small"
+
+# JWT Secret - Change this to a random string!
+jwt_secret = "your-super-secret-jwt-key-change-me"
